@@ -1,6 +1,6 @@
 #!/bin/sh -eu
 
-# bb_clientd's FUSE mount need to be created with the 'allow_other'
+# bb_clientd's FUSE mount needs to be created with the 'allow_other'
 # option set, as containers are unable to access the mount without it.
 if ! grep -q '^user_allow_other$' /etc/fuse.conf; then
   echo user_allow_other >> /etc/fuse.conf

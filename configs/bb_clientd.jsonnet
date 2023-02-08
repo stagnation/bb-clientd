@@ -199,6 +199,9 @@ local cacheDirectory = homeDirectory + '/.cache/bb_clientd';
       // super-user access to the FUSE file system. It is strongly
       // recommended that the permissions on the parent directory of the
       // FUSE file system are locked down before enabling this option.
+      //
+      // bb_clientd's FUSE mount needs to be created with the 'allow_other'
+      // option set, as containers are unable to access the mount without it.
       allowOther: true,
     },
   },
