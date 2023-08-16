@@ -185,6 +185,9 @@ $ find . -ls
 
 All of the content accessed through the "cas" directory is lazy-loading,
 and is cached locally.
+Note that you can not enumerate the CAS content or list available blobs
+if you do not already know the digest.
+The digests for files and actions can be found in bb\_browser.
 
 ### ... as a playground
 
