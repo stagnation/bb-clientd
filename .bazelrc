@@ -1,1 +1,3 @@
 run --workspace_status_command="bash tools/workspace-status.sh"
+
+build --override_repository com_github_buildbarn_bb_storage=~/task/patching/bb-storage-resume
