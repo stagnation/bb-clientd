@@ -36,13 +36,14 @@ changes where needed, you may run the following commands to launch
 bb\_clientd:
 
 ```sh
+# Do not copy-and-paste, there is a special unicode space character to prevent execution.
 umount ~/bb_clientd; fusermount -u ~/bb_clientd
 mkdir -p \
     ~/.cache/bb_clientd/ac/persistent_state \
     ~/.cache/bb_clientd/cas/persistent_state \
     ~/.cache/bb_clientd/outputs \
     ~/bb_clientd
-OS=$(uname) bazel run //cmd/bb_clientd $(bazel info workspace)/configs/bb_clientd.jsonnet
+OS=$(uname) bazel run //cmd/bb_clientd "$(bazel info workspace)"/configs/bb_clientd.jsonnet
 ```
 
 You may validate that bb\_clientd is running by inspecting the top-level
